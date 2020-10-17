@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import auth, views, profile
+from .views import auth, views, profile, schedule
 
 app_name = "web"
 urlpatterns = [
@@ -16,4 +16,5 @@ urlpatterns = [
     path('profile/', profile.profile, name="profile"),
     path('vehicle/create/', profile.vehicle_create, name="vehicle-create"),
     path('vehicle/<vehicle_id>/update/', profile.vehicle_update, name="vehicle-update"),
+    path('shedule/', schedule.schedule, name="shedule"),
 ]

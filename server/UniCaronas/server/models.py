@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -48,22 +50,31 @@ class Schedule(models.Model):
 class Trip(models.Model):
     default_price = models.FloatField(verbose_name="Preço padrão", default=4)
     week_days = (
-        (1, "Domingo"),
-        (2, "Segunda"),
-        (3, "Terça"),
-        (4, "Quarta"),
-        (5, "Quinta"),
-        (6, "Sexta"),
-        (7, "Sábado"),
+        (6, "Domingo"),
+        (0, "Segunda"),
+        (1, "Terça"),
+        (2, "Quarta"),
+        (3, "Quinta"),
+        (4, "Sexta"),
+        (5, "Sábado"),
     )
     origin = models.ForeignKey(Local, on_delete=models.SET_NULL, null=True, related_name='%(class)s_locals_origin', verbose_name="Local de origem")
     destiny = models.ForeignKey(Local, on_delete=models.SET_NULL, null=True, related_name='%(class)s_locals_destiny', verbose_name="Local de destino")
-    day = models.IntegerField(choices=week_days)
+    day = models.IntegerField()
+    hour = models.TimeField(default='django.utils.timezone.now')
     schedule = models.ForeignKey(Schedule, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Planejamento diário"
         verbose_name_plural = "Planejamentos diários"
+
+    def get_default_price_formated(self):
+        import locale
+        locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
+        return locale.currency(self.default_price)
+
+    def get_day_display(self):
+        return list(self.week_days)[self.day][1]
 
     def __str__(self):
         return self.schedule.__str__() + " - " + self.get_day_display()
