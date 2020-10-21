@@ -1,6 +1,9 @@
 export default {
   //Aplication Colors
-  primaryColor: '#C71585',
+  primaryColor: '#4169E1',
+  secondaryColor: '#FFD700',
+  statusBarColor: '#2957E3',
+  inputColor: '#143DB8',
 
   //Neutrals colors
   white: '#FFFFFF',
