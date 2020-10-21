@@ -1,5 +1,12 @@
+from django.contrib.auth.models import User
 from rest_framework import serializers
 from .models import Vehicle, Local, Schedule, Trip, Ride, Passanger
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'username', 'email')
 
 
 class VehicleSerializer(serializers.ModelSerializer):

@@ -9,3 +9,8 @@ def welcome(request):
 @login_required(login_url="/login/")
 def home(request):
     return render(request, 'home.html')
+
+
+@login_required(login_url="/login/")
+def api(request):
+    return render(request, 'api.html')

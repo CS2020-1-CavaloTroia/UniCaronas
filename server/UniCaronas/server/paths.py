@@ -6,6 +6,7 @@ app_name = "web"
 urlpatterns = [
     # Rotas para administração
     path('admin/', admin.site.urls),
+    path('api/', views.api, name="api"),
     # Página de apresentação do sistema
     path('', views.welcome, name="welcome"),
     # Rotas para autenticação
