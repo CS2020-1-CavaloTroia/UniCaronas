@@ -76,10 +76,11 @@ Também será  utilizado MongoDB Atlas para a base de dados juntamente com Herok
 ### Pré-requisitos
 
 Antes de dar início, certifique-se que tenha em sua máquina:
-- [ ] Banco de dados MongoBD versão xx ou superior
-- [ ] Node versão xx ou superior
-- [ ] Yarn versão xx ou superior
-- [ ] Python2 versão xx ou superior
+- [ ] Banco de dados MongoBD
+- [ ] Django 3.1.2 ou superior
+- [ ] Node versão 10.16 ou superior
+- [ ] Yarn versão 1.22.4 ou superior
+- [ ] Python2 versão 3.6 ou superior
 
 Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/).
 
@@ -107,17 +108,6 @@ A aplicação será aberta na porta:8000 - acesse http://localhost:8000
 Caso queira especificar a porta utilize
 $ python manage.py runserver <port>
 ```
-
-#### Criando um Banco de Dados
-
->TODO passo a passo
-
-Dados de Acesso:
-- [ ] Homologação
->TODO
-
-- [ ] Produção
->TODO
 
 ### Rodando o Frontend
 
