@@ -53,12 +53,12 @@ Será utilizada uma REST - API para a comunicação com o server side.
 
 
 ### Backend
-- Python 3.6
-- Django 3.1.2
+- Python 3.6 ou superior
+- Django 3.1.2 ou superior
 - MondoDB Atlas
 - Heroku
 	
-Para o back-end da aplicação será utilizado Python 3.6 juntamente com a coleção de bibliotecas Django 3.1.2 que são bastante úteis na construção de um server para a aplicação.
+Para o back-end da aplicação será utilizado Python 3.6 juntamente com a coleção de bibliotecas Django 3.1.2, que são bastante úteis na construção de um server para a aplicação.
 
 Também será  utilizado MongoDB Atlas para a base de dados juntamente com Heroku, que é uma plataforma em nuvem (PaaS - Platform as a service) que suporta várias tecnologias para a hospedagem de aplicações.
 
