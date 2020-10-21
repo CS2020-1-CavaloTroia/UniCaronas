@@ -102,17 +102,6 @@ If you want to specify the port, use
 $ python manage.py runserver <port>
 ```
 
-#### Creating a database
-
->TODO passo a passo
-
-Access keys:
-- [ ] Homologation
->TODO
-
-- [ ] Production
->TODO
-
 ### Running the Frontend
 
 ```bash
