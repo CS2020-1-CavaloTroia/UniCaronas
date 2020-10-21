@@ -39,7 +39,7 @@ university students enrolled at the Federal University of Goiás. They can offer
 
 ## 🎨 Layout
 
-The application layout is available on Figma [clicking here](https://www.figma.com/file/oYfElPcwqV7qjW5P2ysDxw/UniCaronas?node-id=0%3A1){:target="_blank"}.
+The application layout is available on Figma [clicking here](https://www.figma.com/file/oYfElPcwqV7qjW5P2ysDxw/UniCaronas?node-id=0%3A1).
 
 ## 🛠 Technologies
 
