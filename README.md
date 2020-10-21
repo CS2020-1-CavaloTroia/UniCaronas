@@ -39,7 +39,7 @@ podem oferecer caronas, visualizá-las ou solicitá-las a um motorista.
 
 ## 🎨 Layout
 
-O layout da aplicação está disponível no Figma [clicando aqui].
+O layout da aplicação está disponível no Figma [clicando aqui](https://www.figma.com/file/oYfElPcwqV7qjW5P2ysDxw/UniCaronas?node-id=0%3A1).
 
 ## 🛠 Tecnologias
 
