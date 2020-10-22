@@ -20,7 +20,7 @@
  	* [Rodando o Frontend](#rodando-o-frontend)
  * [Como contribuir](#-como-contribuir)
  * [Autores](#-autores)
- 
+
 ## 💻 Sobre o projeto
 
 Este projeto é um aplicativo mobile que conecta motoristas e passageiros
@@ -39,19 +39,28 @@ podem oferecer caronas, visualizá-las ou solicitá-las a um motorista.
 
 ## 🎨 Layout
 
-O layout da aplicação está disponível no Figma [clicando aqui].
+O layout da aplicação está disponível no Figma [clicando aqui](https://www.figma.com/file/oYfElPcwqV7qjW5P2ysDxw/UniCaronas?node-id=0%3A1).
 
 ## 🛠 Tecnologias
 
-As seguintes ferramentas são usadas na construção do projeto:
+### Frontend
+- JavaScript
+- React Native 0.63.3
 
-- [ ] React Native versão xx
-- [ ] Python versão 3.6
-- [ ] Django versão 3.1.2
-- [ ] MongoDB versão xx
-- [ ] Heroku versão xx
-- [ ] Digital Ocean versão xx
-- [ ] Docker versão xx
+Para o front-end da aplicação será utilizada a linguagem JavaScript juntamente  React Native 0.63. Se tratando de uma aplicação mobile,  as tecnologias citadas apresentam vários componentes que auxiliarão no desenvolvimento de uma aplicação de qualidade.
+
+Será utilizada uma REST - API para a comunicação com o server side.
+
+
+### Backend
+- Python 3.6 ou superior
+- Django 3.1.2 ou superior
+- MondoDB Atlas
+- Heroku
+
+Para o back-end da aplicação será utilizado Python 3.6 juntamente com a coleção de bibliotecas Django 3.1.2, que são bastante úteis na construção de um server para a aplicação.
+
+Também será  utilizado MongoDB Atlas para a base de dados juntamente com Heroku, que é uma plataforma em nuvem (PaaS - Platform as a service) que suporta várias tecnologias para a hospedagem de aplicações.
 
 ## 🚀 Desenvolvimento
 
@@ -67,10 +76,11 @@ As seguintes ferramentas são usadas na construção do projeto:
 ### Pré-requisitos
 
 Antes de dar início, certifique-se que tenha em sua máquina:
-- [ ] Banco de dados MongoBD versão xx ou superior
-- [ ] Node versão xx ou superior
-- [ ] Yarn versão xx ou superior
-- [ ] Python versão 3.6 ou superior
+- [ ] Banco de dados MongoBD
+- [ ] Django 3.1.2 ou superior
+- [ ] Node versão 10.16 ou superior
+- [ ] Yarn versão 1.22.4 ou superior
+- [ ] Python2 versão 3.6 ou superior
 
 Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/).
 
@@ -104,17 +114,6 @@ Caso queira especificar a porta utilize
 $ python manage.py runserver <port>
 ```
 
-#### Criando um Banco de Dados
-
->TODO passo a passo
-
-Dados de Acesso:
-- [ ] Homologação
->TODO
-
-- [ ] Produção
->TODO
-
 ### Rodando o Frontend
 
 ```bash
@@ -128,7 +127,7 @@ Instale as dependências
 $ yarn
 
 Execute a aplicação em modo de desenvolvimento
-$ react-native run-is 
+$ react-native run-is
 ou
 $ react-native run-android
 

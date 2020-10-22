@@ -1,7 +1,7 @@
 import produce from 'immer';
 
 const INITIAL_STATE = {
-  email: 'test1Redux',
+  email: '',
   password: '',
   token: null,
   loading: false,

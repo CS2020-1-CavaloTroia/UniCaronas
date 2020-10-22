@@ -39,18 +39,21 @@ university students enrolled at the Federal University of Goiás. They can offer
 
 ## 🎨 Layout
 
-The application layout is available on Figma [clicking here].
+The application layout is available on Figma [clicking here](https://www.figma.com/file/oYfElPcwqV7qjW5P2ysDxw/UniCaronas?node-id=0%3A1).
 
 ## 🛠 Technologies
 
 The following tools are used in the construction of the project:
 
-- [ ] React Native version xx
-- [ ] Python version xx
-- [ ] MongoDB version xx
-- [ ] Heroku version xx
-- [ ] Digital Ocean version xx
-- [ ] Docker version xx
+### Frontend
+- JavaScript
+- React Native 0.63.3
+
+### Backend
+- Python 3.6
+- Django 3.1.2
+- MondoDB Atlas
+- Heroku
 
 ## 🚀 Development
 
@@ -66,10 +69,11 @@ The following tools are used in the construction of the project:
 ### Prerequisites
 
 Before starting, make sure you have on your machine:
-- [ ] MongoDB database version xx or higher
-- [ ] Node version xx or higher
-- [ ] Yarn version xx or higher
-- [ ] Python2 version xx or higher
+- [ ] MongoDB database
+- [ ] Django 3.1.2 or higher
+- [ ] Node version 10.16 or higher
+- [ ] Yarn version 1.22.4 or higher
+- [ ] Python2 version 3.6 or higher
 
 Also, it’s good to have an editor to work with the code, like [VSCode](https://code.visualstudio.com/).
 
@@ -97,17 +101,6 @@ The application will open at the port:8000 - acess http://localhost:8000
 If you want to specify the port, use
 $ python manage.py runserver <port>
 ```
-
-#### Creating a database
-
->TODO passo a passo
-
-Access keys:
-- [ ] Homologation
->TODO
-
-- [ ] Production
->TODO
 
 ### Running the Frontend
 

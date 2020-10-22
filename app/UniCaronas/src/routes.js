@@ -24,15 +24,32 @@ import DriverMap from './screens/Driver/Map';
 import PassengerDrawer from './components/passenger/Drawer';
 import PassengerMap from './screens/Passenger/Map';
 
+//GLOBAL SCREENS
+import SignIn from '~/screens/SignIn';
+
 export default function Routes() {
   const showDrawer = false;
   const userType = 'driver'; //possible values: "driver" || "passenger"
 
+  // Redux (auth) global variables
+  const token = useSelector((state) => state.auth.token);
+
   return (
     <>
-      <StatusBar backgroundColor={colors.primaryColor} />
+      <StatusBar backgroundColor={colors.statusBarColor} />
       <NavigationContainer ref={navigationRef}>
-        {userType === 'driver' && (
+        {/* If the user is not authenticated -> show the Signin screen */}
+        {!token && (
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: false,
+            }}>
+            <Stack.Screen name="SignIn" component={SignIn} />
+          </Stack.Navigator>
+        )}
+
+        {/* If the user type == DRIVER -> show the options for driver */}
+        {token && userType === 'driver' && (
           <Drawer.Navigator
             drawerStyle={{width: !showDrawer ? null : 350}}
             initialRouteName="Map"
@@ -46,7 +63,8 @@ export default function Routes() {
           </Drawer.Navigator>
         )}
 
-        {userType === 'passenger' && (
+        {/* If the user type == PASSENGER -> show the options for passenger */}
+        {token && userType === 'passenger' && (
           <Drawer.Navigator
             drawerStyle={{width: !showDrawer ? null : 350}}
             initialRouteName="Map"
