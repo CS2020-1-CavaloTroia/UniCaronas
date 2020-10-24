@@ -98,10 +98,11 @@ $ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronas
 Acesse a pasta do projeto no seu terminal/cmd
 $ cd server/UniCaronas
 
-Instale as dependências
+Para o Linux, necessário instalar o pip
 $ apt install python3-pip
-$ python -m pip install Django
-$ pip install djangorestframework
+
+Instale as dependências
+$ pip install Django==3.1.2 djangorestframework pyyaml django-rest-swagger
 
 Execute a criação do banco de dados
 $ python manage.py migrate
