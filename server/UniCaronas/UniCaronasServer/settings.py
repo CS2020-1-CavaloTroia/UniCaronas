@@ -1,8 +1,13 @@
 import os
 from pathlib import Path
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -74,11 +79,33 @@ WSGI_APPLICATION = 'UniCaronasServer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+DATABASE = {
+    'ENGINE': 'djongo',
+    "CLIENT": {
+        "name": env('DBNAME'),
+        "host": env('DBHOST'),
+        "username": env('DBUSERNAME'),
+        "password": env('DBPASS'),
+        "authMechanism": "SCRAM-SHA-1",
+    },
+} if env('DEBUG') == True else {
+    'ENGINE': 'djongo',
+    "CLIENT": {
+        "name": env('STAGE_DBNAME'),
+        "host": env('STAGE_DBHOST'),
+        "username": env('STAGE_DBUSERNAME'),
+        "password": env('STAGE_DBPASS'),
+        "authMechanism": "SCRAM-SHA-1",
+    },
+}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+
+    'default': DATABASE
 }
 
 # Password validation
@@ -116,4 +143,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-a
