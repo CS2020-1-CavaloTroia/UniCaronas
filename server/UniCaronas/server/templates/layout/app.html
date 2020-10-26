@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}UniCaronas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css.map">
     <style>
         body {
             overflow-x: hidden;
         }
     </style>
+    {% block head %}{% endblock %}
 </head>
 <body>
-{% include 'layout/nav.html' %}
+
+{% if request.user.is_authenticated %}
+    {% include 'layout/nav.html' %}
+{% endif %}
+
 <div class="row">
     <div class="col-12">
         <div class="container mt-4">
-            {# Mensagem para informações relacionadas com as ações do usuário #}
             {% if message %}
-                {# Alerta da página de acordo com o tipo da mensagem #}
                 <div class="alert alert-{{ message.type }} alert-dismissible fade show" role="alert">
-                    {# Exibição da mensagem #}
                     <strong>{{ message.text }}</strong>
-                    {# Botão para ocultar a mensagem caso seja permitido #}
                     {% if message.dismissible %}
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -29,12 +31,10 @@
                     {% endif %}
                 </div>
             {% endif %}
-            {# Conteúdo da página #}
             {% block content %} {% endblock %}
         </div>
     </div>
 </div>
-{# Conteúdo da página #}
 {% block content-no-container %} {% endblock %}
 
 <footer>
@@ -43,5 +43,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     {% block javascript %}{% endblock %}
 </footer>
+
 </body>
 </html>

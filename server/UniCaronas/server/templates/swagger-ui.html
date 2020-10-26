@@ -1,0 +1,32 @@
+{% extends "layout/app.html" %}
+
+{% block title %}Swagger - {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3.35.2/swagger-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3.35.2/swagger-ui.css.map"/>
+{% endblock %}
+
+{% block content-no-container %}
+    <div id="swagger-ui"></div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="https://unpkg.com/swagger-ui-dist@3.35.2/swagger-ui-bundle.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@3.35.2/swagger-ui-bundle.js.map"></script>
+    <script>
+        const ui = SwaggerUIBundle({
+            url: "{% url 'web:iframe-openapi' %}",
+            dom_id: '#swagger-ui',
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIBundle.SwaggerUIStandalonePreset
+            ],
+            layout: "BaseLayout",
+            requestInterceptor: (request) => {
+                request.headers['X-CSRFToken'] = "{{ csrf_token }}"
+                return request;
+            }
+        })
+    </script>
+{% endblock %}

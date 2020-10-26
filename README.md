@@ -20,7 +20,7 @@
  	* [Rodando o Frontend](#rodando-o-frontend)
  * [Como contribuir](#-como-contribuir)
  * [Autores](#-autores)
- 
+
 ## 💻 Sobre o projeto
 
 Este projeto é um aplicativo mobile que conecta motoristas e passageiros
@@ -48,6 +48,9 @@ O layout da aplicação está disponível no Figma [clicando aqui](https://www.f
 - React Native 0.63.3
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> MongoDB_cofig
 Para o front-end da aplicação será utilizada a linguagem JavaScript juntamente  React Native 0.63. Se tratando de uma aplicação mobile,  as tecnologias citadas apresentam vários componentes que auxiliarão no desenvolvimento de uma aplicação de qualidade.
 
 Será utilizada uma REST - API para a comunicação com o server side.
@@ -58,10 +61,12 @@ Será utilizada uma REST - API para a comunicação com o server side.
 - Django 3.1.2 ou superior
 - MondoDB Atlas
 - Heroku
-	
+
 Para o back-end da aplicação será utilizado Python 3.6 juntamente com a coleção de bibliotecas Django 3.1.2, que são bastante úteis na construção de um server para a aplicação.
 
 Também será  utilizado MongoDB Atlas para a base de dados juntamente com Heroku, que é uma plataforma em nuvem (PaaS - Platform as a service) que suporta várias tecnologias para a hospedagem de aplicações.
+<<<<<<< HEAD
+=======
 =======
 - [ ] React Native versão xx
 - [ ] Python versão 3.6
@@ -71,6 +76,7 @@ Também será  utilizado MongoDB Atlas para a base de dados juntamente com Herok
 - [ ] Digital Ocean versão xx
 - [ ] Docker versão xx
 >>>>>>> 3f6da69c697e0a4070d787e4ea3635ee010b8379
+>>>>>>> MongoDB_cofig
 
 ## 🚀 Desenvolvimento
 
@@ -87,17 +93,23 @@ Também será  utilizado MongoDB Atlas para a base de dados juntamente com Herok
 
 Antes de dar início, certifique-se que tenha em sua máquina:
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> MongoDB_cofig
 - [ ] Banco de dados MongoBD
 - [ ] Django 3.1.2 ou superior
 - [ ] Node versão 10.16 ou superior
 - [ ] Yarn versão 1.22.4 ou superior
 - [ ] Python2 versão 3.6 ou superior
+<<<<<<< HEAD
+=======
 =======
 - [ ] Banco de dados MongoBD versão xx ou superior
 - [ ] Node versão xx ou superior
 - [ ] Yarn versão xx ou superior
 - [ ] Python versão 3.6 ou superior
 >>>>>>> 3f6da69c697e0a4070d787e4ea3635ee010b8379
+>>>>>>> MongoDB_cofig
 
 Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/).
 
@@ -115,10 +127,11 @@ $ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronas
 Acesse a pasta do projeto no seu terminal/cmd
 $ cd server/UniCaronas
 
-Instale as dependências
+Para o Linux, necessário instalar o pip
 $ apt install python3-pip
-$ python -m pip install Django
-$ pip install djangorestframework
+
+Instale as dependências
+$ pip install Django==3.1.2 djangorestframework pyyaml django-rest-swagger dnspython djongo
 
 Execute a criação do banco de dados
 $ python manage.py migrate
@@ -144,7 +157,7 @@ Instale as dependências
 $ yarn
 
 Execute a aplicação em modo de desenvolvimento
-$ react-native run-is 
+$ react-native run-is
 ou
 $ react-native run-android
 

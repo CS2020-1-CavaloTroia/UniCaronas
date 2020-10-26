@@ -91,6 +91,9 @@ $ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronas
 Access the project folder in your terminal / cmd
 $ cd server/UniCaronas
 
+Install the dependencies
+$ pip install Django==3.1.2 djangorestframework pyyaml django-rest-swagger dnspython djongo
+
 Create a database
 $ python manage.py migrate
 
@@ -101,17 +104,6 @@ The application will open at the port:8000 - acess http://localhost:8000
 If you want to specify the port, use
 $ python manage.py runserver <port>
 ```
-
-#### Creating a database
-
->TODO passo a passo
-
-Access keys:
-- [ ] Homologation
->TODO
-
-- [ ] Production
->TODO
 
 ### Running the Frontend
 
