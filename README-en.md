@@ -91,6 +91,9 @@ $ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronas
 Access the project folder in your terminal / cmd
 $ cd server/UniCaronas
 
+Install the dependencies
+$ pip install Django==3.1.2 djangorestframework pyyaml django-rest-swagger dnspython djongo
+
 Create a database
 $ python manage.py migrate
 
