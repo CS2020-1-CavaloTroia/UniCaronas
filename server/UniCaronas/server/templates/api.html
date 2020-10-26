@@ -1,0 +1,56 @@
+{% extends "layout/app.html" %}
+
+{# Título da página #}
+{% block title %}API - {% endblock %}
+
+{# Conteúdo #}
+{% block content-no-container %}
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-4 col-xl-2 offset-xl-1">
+            <div class="row">
+                <div class="col-12">
+                    <h3>API's</h3>
+                </div>
+                <div class="col-12">
+                    <ul>
+                        <li>
+                            <button class="btn btn-link" data-url="{% url "api:get_token" %}">Token de acesso</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-link" data-url="{% url "api:profile" %}">Usuários</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-link" data-url="{% url "api:vehicle" %}">Veículos</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-link" data-url="{% url "api:local" %}">Locais</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-link" data-url="{% url "api:schedule" %}">Cronogramas</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-link" data-url="{% url "api:trip" %}">Viagens</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-link" data-url="{% url "api:ride" %}">Caronas</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-8 col-xl-8">
+            <iframe src="{% url 'api:profile' %}" frameborder="0" width="100%" height="600vh"></iframe>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+    $('.btn-link').on('click', function () {
+        $('.btn-link').removeClass('text-success')
+        $(this).addClass('text-success')
+        let url = $(this).data('url')
+        $('iframe').prop('src', url)
+    })
+    </script>
+{% endblock %}

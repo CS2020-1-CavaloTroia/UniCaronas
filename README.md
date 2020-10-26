@@ -47,6 +47,7 @@ O layout da aplicação está disponível no Figma [clicando aqui](https://www.f
 - JavaScript
 - React Native 0.63.3
 
+<<<<<<< HEAD
 Para o front-end da aplicação será utilizada a linguagem JavaScript juntamente  React Native 0.63. Se tratando de uma aplicação mobile,  as tecnologias citadas apresentam vários componentes que auxiliarão no desenvolvimento de uma aplicação de qualidade.
 
 Será utilizada uma REST - API para a comunicação com o server side.
@@ -61,6 +62,15 @@ Será utilizada uma REST - API para a comunicação com o server side.
 Para o back-end da aplicação será utilizado Python 3.6 juntamente com a coleção de bibliotecas Django 3.1.2, que são bastante úteis na construção de um server para a aplicação.
 
 Também será  utilizado MongoDB Atlas para a base de dados juntamente com Heroku, que é uma plataforma em nuvem (PaaS - Platform as a service) que suporta várias tecnologias para a hospedagem de aplicações.
+=======
+- [ ] React Native versão xx
+- [ ] Python versão 3.6
+- [ ] Django versão 3.1.2
+- [ ] MongoDB versão xx
+- [ ] Heroku versão xx
+- [ ] Digital Ocean versão xx
+- [ ] Docker versão xx
+>>>>>>> 3f6da69c697e0a4070d787e4ea3635ee010b8379
 
 ## 🚀 Desenvolvimento
 
@@ -76,11 +86,18 @@ Também será  utilizado MongoDB Atlas para a base de dados juntamente com Herok
 ### Pré-requisitos
 
 Antes de dar início, certifique-se que tenha em sua máquina:
+<<<<<<< HEAD
 - [ ] Banco de dados MongoBD
 - [ ] Django 3.1.2 ou superior
 - [ ] Node versão 10.16 ou superior
 - [ ] Yarn versão 1.22.4 ou superior
 - [ ] Python2 versão 3.6 ou superior
+=======
+- [ ] Banco de dados MongoBD versão xx ou superior
+- [ ] Node versão xx ou superior
+- [ ] Yarn versão xx ou superior
+- [ ] Python versão 3.6 ou superior
+>>>>>>> 3f6da69c697e0a4070d787e4ea3635ee010b8379
 
 Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/).
 
@@ -97,6 +114,11 @@ $ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronas
 
 Acesse a pasta do projeto no seu terminal/cmd
 $ cd server/UniCaronas
+
+Instale as dependências
+$ apt install python3-pip
+$ python -m pip install Django
+$ pip install djangorestframework
 
 Execute a criação do banco de dados
 $ python manage.py migrate

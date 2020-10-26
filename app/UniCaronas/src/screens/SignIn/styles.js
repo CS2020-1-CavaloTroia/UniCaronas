@@ -33,3 +33,8 @@ export const Gradient = styled(LinearGradient).attrs({
   padding: 10px;
   justify-content: center;
 `;
+
+export const AppIconContainer = styled.View`
+  align-items: center;
+  margin-bottom: 25px;
+`;

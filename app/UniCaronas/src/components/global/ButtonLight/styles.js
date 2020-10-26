@@ -1,11 +1,11 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.TouchableOpacity`
-  margin-top: 10px;
+  padding: 10px 0;
 `;
 
 export const TextButton = styled.Text`
   color: ${(props) => props.color};
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
+  text-decoration-line: underline;
 `;

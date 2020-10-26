@@ -1,8 +1,9 @@
+from datetime import datetime
+
 from django.db import models
 from django.contrib.auth.models import User
 
 
-# Modelagem da tabela de Veículo
 class Vehicle(models.Model):
     model = models.CharField(max_length=50, verbose_name="Modelo")
     maker = models.CharField(max_length=50, verbose_name="Fabricante")
@@ -22,7 +23,6 @@ class Vehicle(models.Model):
         return f"{self.maker} {self.model} - [{self.board.upper()}]"
 
 
-# Modelagem da tabela de Local
 class Local(models.Model):
     name = models.CharField(max_length=255, verbose_name="Nome")
     latitude = models.FloatField(verbose_name="Latitude")
@@ -36,7 +36,6 @@ class Local(models.Model):
         return self.name
 
 
-# Modelagem da tabela de Cronograma
 class Schedule(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
@@ -48,32 +47,39 @@ class Schedule(models.Model):
         return f"Cronograma de {self.user.get_username()}"
 
 
-# Modelagem do dia do Cronograma
 class Trip(models.Model):
     default_price = models.FloatField(verbose_name="Preço padrão", default=4)
     week_days = (
-        (1, "Domingo"),
-        (2, "Segunda"),
-        (3, "Terça"),
-        (4, "Quarta"),
-        (5, "Quinta"),
-        (6, "Sexta"),
-        (7, "Sábado"),
+        (6, "Domingo"),
+        (0, "Segunda"),
+        (1, "Terça"),
+        (2, "Quarta"),
+        (3, "Quinta"),
+        (4, "Sexta"),
+        (5, "Sábado"),
     )
     origin = models.ForeignKey(Local, on_delete=models.SET_NULL, null=True, related_name='%(class)s_locals_origin', verbose_name="Local de origem")
     destiny = models.ForeignKey(Local, on_delete=models.SET_NULL, null=True, related_name='%(class)s_locals_destiny', verbose_name="Local de destino")
-    day = models.IntegerField(choices=week_days)
+    day = models.IntegerField()
+    hour = models.TimeField(default='django.utils.timezone.now')
     schedule = models.ForeignKey(Schedule, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Planejamento diário"
         verbose_name_plural = "Planejamentos diários"
 
+    def get_default_price_formated(self):
+        import locale
+        locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
+        return locale.currency(self.default_price)
+
+    def get_day_display(self):
+        return list(self.week_days)[self.day][1]
+
     def __str__(self):
         return self.schedule.__str__() + " - " + self.get_day_display()
 
 
-# Modelagem da tabela de Carona
 class Ride(models.Model):
     driver = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, verbose_name="Motorista")
     vehicle = models.ForeignKey(Vehicle, on_delete=models.SET_NULL, null=True, verbose_name="Veículo")
@@ -89,7 +95,6 @@ class Ride(models.Model):
         return f"Carona de {self.driver.get_username()} [{self.vehicle.__str__()}]"
 
 
-# Tabela de passageiro
 class Passanger(models.Model):
     passenger = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, verbose_name="Passageiro")
     ride = models.ForeignKey(Ride, on_delete=models.SET_NULL, null=True, verbose_name="Carona")

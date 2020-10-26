@@ -6,8 +6,15 @@ import Button from '~/components/global/Button';
 import ButtonLight from '~/components/global/ButtonLight';
 import colors from '~/styles/colors';
 
-import {Container, Section, Background, Gradient} from './styles';
-import {Text, TouchableOpacity} from 'react-native';
+import AppIcon from '~/assets/svg/appIcon.svg';
+
+import {
+  Container,
+  AppIconContainer,
+  Section,
+  Background,
+  Gradient,
+} from './styles';
 
 export default function SignIn({navigation}) {
   const FormSchema = Yup.object().shape({
@@ -19,6 +26,10 @@ export default function SignIn({navigation}) {
     <Container>
       <Background />
       <Gradient>
+        <AppIconContainer>
+          <AppIcon />
+        </AppIconContainer>
+
         <Formik
           initialValues={{
             email: '',
@@ -81,7 +92,7 @@ export default function SignIn({navigation}) {
 
               <Section align="center">
                 <ButtonLight
-                  style={{marginTop: 25}}
+                  style={{marginTop: 10}}
                   color={colors.white}
                   onPress={() => {}}
                   text="Não possui uma conta? Cadastre-se"
