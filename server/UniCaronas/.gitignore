@@ -103,6 +103,7 @@ celerybeat.pid
 
 # Environments
 .env
+UniCaronasServer/.env
 .venv
 env/
 venv/

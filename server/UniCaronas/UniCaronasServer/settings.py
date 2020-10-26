@@ -16,7 +16,7 @@ environ.Env.read_env()
 SECRET_KEY = 'ieh2(x%8ey)6i8(j#x=a#7udw@_u&nr8mgc&*a$v#3c*odk2yf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 X_FRAME_OPTIONS = 'ALLOWALL'
 
@@ -88,7 +88,7 @@ DATABASE = {
         "password": env('DBPASS'),
         "authMechanism": "SCRAM-SHA-1",
     },
-} if env('DEBUG') == True else {
+} if DEBUG else {
     'ENGINE': 'djongo',
     "CLIENT": {
         "name": env('STAGE_DBNAME'),
