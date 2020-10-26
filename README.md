@@ -102,7 +102,7 @@ Para o Linux, necessário instalar o pip
 $ apt install python3-pip
 
 Instale as dependências
-$ pip install Django==3.1.2 djangorestframework pyyaml django-rest-swagger
+$ pip install Django==3.1.2 djangorestframework pyyaml django-rest-swagger dnspython djongo
 
 Execute a criação do banco de dados
 $ python manage.py migrate
