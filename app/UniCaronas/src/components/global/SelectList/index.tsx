@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Modal, Container, Scroll, Item, TextItem} from './styles';
-import colors from '~/styles/colors';
+import colors from '../../styles/colors';
 import { View } from 'react-native';
 
 export interface Props {

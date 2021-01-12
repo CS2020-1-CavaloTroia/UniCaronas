@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 import ModalComponent from 'react-native-modal';
-import colors from '~/styles/colors';
+import colors from '../../styles/colors';
 
 export const Modal = styled(ModalComponent).attrs({
   backdropColor: '#00000077'

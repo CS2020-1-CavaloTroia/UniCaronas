@@ -1,8 +1,8 @@
 import React from 'react';
-import Icon from '~/components/global/Icon';
-import IconComponent from '~/components/global/Icon'
-import colors from '~/styles/colors';
-import Loading from '~/components/global/Loading';
+import Icon from '../Icon';
+import IconComponent from '../Icon'
+import colors from '../../../styles/colors';
+import Loading from '../Loading';
 import {Container, TextButton} from './styles'
 
 type Type = 'AntDesign' |

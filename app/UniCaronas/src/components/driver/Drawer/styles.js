@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
-import colors from '~/styles/colors';
+import styled from "styled-components/native";
+import colors from "../../../styles/colors";
 
 export const Container = styled.ScrollView`
   width: 280px;

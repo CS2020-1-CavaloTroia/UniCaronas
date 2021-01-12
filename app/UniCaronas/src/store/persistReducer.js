@@ -1,14 +1,14 @@
-import AsyncStorage from '@react-native-community/async-storage';
-import {persistReducer} from 'redux-persist';
+import AsyncStorage from "@react-native-community/async-storage";
+import { persistReducer } from "redux-persist";
 
 export default (reducers) => {
   const persistedReducer = persistReducer(
     {
-      key: 'uni_caronas',
+      key: "uni_caronas",
       storage: AsyncStorage,
-      whitelist: ['auth'],
+      whitelist: ["auth"],
     },
-    reducers,
+    reducers
   );
 
   return persistedReducer;

@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import Icon from '~/components/global/Icon';
-import colors from '~/styles/colors';
-import SelectList from '../SelectList';
+import React, { useState } from "react";
+import Icon from "../Icon";
+import colors from "../../../styles/colors";
+import SelectList from "../SelectList";
 import {
   Container,
   Title,
@@ -10,7 +10,7 @@ import {
   TextBottom,
   SelectContainer,
   SelectText,
-} from './styles';
+} from "./styles";
 
 export default function Input({
   title,
@@ -32,7 +32,8 @@ export default function Input({
       <IContainer
         background={background}
         border={textBottom ? borderColor : null}
-        select={select.length > 0}>
+        select={select.length > 0}
+      >
         <TInput color={textColor} select={select.length > 0} {...rest} />
         {select.length > 0 && (
           <>

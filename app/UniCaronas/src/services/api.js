@@ -1,10 +1,9 @@
-import axios from 'axios';
-import {API_BASE_URL} from '@env';
+import axios from "axios";
 
-export const {CancelToken, isCancel} = axios;
+export const { CancelToken, isCancel } = axios;
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: "BASE_URL",
 });
 
 export default api;

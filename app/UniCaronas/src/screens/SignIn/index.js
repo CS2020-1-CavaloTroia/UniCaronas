@@ -1,12 +1,12 @@
-import React from 'react';
-import {Formik} from 'formik';
-import * as Yup from 'yup';
-import Input from '~/components/global/Input';
-import Button from '~/components/global/Button';
-import ButtonLight from '~/components/global/ButtonLight';
-import colors from '~/styles/colors';
+import React from "react";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import Input from "../../components/global/Input";
+import Button from "../../components/global/Button";
+import ButtonLight from "../../components/global/ButtonLight";
+import colors from "../../styles/colors";
 
-import AppIcon from '~/assets/svg/appIcon.svg';
+import AppIcon from "../../assets/svg/appIcon.svg";
 
 import {
   Container,
@@ -14,12 +14,12 @@ import {
   Section,
   Background,
   Gradient,
-} from './styles';
+} from "./styles";
 
-export default function SignIn({navigation}) {
+export default function SignIn({ navigation }) {
   const FormSchema = Yup.object().shape({
-    email: Yup.string().required('Informe seu email institucional.'),
-    password: Yup.string().required('Informe sua senha.'),
+    email: Yup.string().required("Informe seu email institucional."),
+    password: Yup.string().required("Informe sua senha."),
   });
 
   return (
@@ -32,26 +32,27 @@ export default function SignIn({navigation}) {
 
         <Formik
           initialValues={{
-            email: '',
-            password: '',
+            email: "",
+            password: "",
           }}
           onSubmit={(values) => console.log(values.email, values.password)}
-          validationSchema={() => FormSchema}>
-          {({values, handleChange, handleSubmit, errors, touched}) => (
+          validationSchema={() => FormSchema}
+        >
+          {({ values, handleChange, handleSubmit, errors, touched }) => (
             <>
               <Input
                 title="Email"
                 titleColor={colors.white}
                 background={colors.inputColor}
                 textColor={colors.white}
-                select={['@discente.ufg.br', '@ufg.br', '@prograd.ufg.br']}
+                select={["@discente.ufg.br", "@ufg.br", "@prograd.ufg.br"]}
                 keyboardType="email-address"
                 autoCorrect={false}
                 autoCapitalize="none"
                 placeholder="Email"
                 placeholderTextColor={`${colors.white}55`}
                 value={values.email}
-                onChangeText={handleChange('email')}
+                onChangeText={handleChange("email")}
                 textBottomColor={colors.secondaryColor}
                 borderColor={colors.secondaryColor}
                 textBottom={errors.email && touched.email ? errors.email : null}
@@ -68,7 +69,7 @@ export default function SignIn({navigation}) {
                 placeholder="Senha"
                 placeholderTextColor={`${colors.white}55`}
                 value={values.password}
-                onChangeText={handleChange('password')}
+                onChangeText={handleChange("password")}
                 textBottomColor={colors.secondaryColor}
                 borderColor={colors.secondaryColor}
                 textBottom={
@@ -92,7 +93,7 @@ export default function SignIn({navigation}) {
 
               <Section align="center">
                 <ButtonLight
-                  style={{marginTop: 10}}
+                  style={{ marginTop: 10 }}
                   color={colors.white}
                   onPress={() => {}}
                   text="Não possui uma conta? Cadastre-se"

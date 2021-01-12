@@ -1,5 +1,5 @@
 import React from 'react';
-import colors from '~/styles/colors';
+import colors from '../../../styles/colors';
 import {Container, TextButton} from './styles'
 
 export interface Props {
