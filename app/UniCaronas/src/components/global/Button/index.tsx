@@ -1,6 +1,5 @@
 import React from 'react';
-import Icon from '../Icon';
-import IconComponent from '../Icon'
+import { Ionicons } from '@expo/vector-icons';
 import colors from '../../../styles/colors';
 import Loading from '../Loading';
 import {Container, TextButton} from './styles'
@@ -37,8 +36,7 @@ const Button: React.FC<Props> = ({text, size = 200, loading = true, color = colo
     <Container size={size} background={background} {...rest}>
       <TextButton color={color}>{text}</TextButton>
 
-      {!loading && <Icon
-        type={iconType}
+      {!loading && <Ionicons
         name={iconName}
         color={iconColor}
         size={30}

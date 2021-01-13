@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Icon from "../Icon";
+import { Ionicons } from '@expo/vector-icons';
 import colors from "../../../styles/colors";
 import SelectList from "../SelectList";
 import {
@@ -39,8 +39,7 @@ export default function Input({
           <>
             <SelectContainer onPress={() => setShowList(!showList)}>
               <SelectText color={textColor}>{select[selecedIndex]}</SelectText>
-              <Icon
-                type="Ionicons"
+              <Ionicons
                 name="chevron-down"
                 size={20}
                 color={colors.white}
