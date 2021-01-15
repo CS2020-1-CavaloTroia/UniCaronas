@@ -27,8 +27,8 @@ Este projeto é um aplicativo mobile que conecta motoristas e passageiros
 universitários matrículados na Universidade Federal de Goiás. Os estudantes
 podem oferecer caronas, visualizá-las ou solicitá-las a um motorista.
 
-O Projeto está dividido em dois repositórios:
-FRONTEND: https://github.com/CS2020-1-CavaloTroia/UniCaronasMobile
+O Projeto está dividido em dois repositórios:</br>
+FRONTEND: https://github.com/CS2020-1-CavaloTroia/UniCaronasMobile</br>
 BACKEND: https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
 
 >Projeto desenvolvido durante o curso de Construção de Software da Universidade Federal de Goiás.
