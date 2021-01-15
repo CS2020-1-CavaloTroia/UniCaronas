@@ -27,19 +27,22 @@ Este projeto é um aplicativo mobile que conecta motoristas e passageiros
 universitários matrículados na Universidade Federal de Goiás. Os estudantes
 podem oferecer caronas, visualizá-las ou solicitá-las a um motorista.
 
+O Projeto está dividido em dois repositórios:
+FRONTEND: https://github.com/CS2020-1-CavaloTroia/UniCaronasMobile
+BACKEND: https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
+
 >Projeto desenvolvido durante o curso de Construção de Software da Universidade Federal de Goiás.
 
 ## 📱 Funcionalidades
 
 - [x] Estudantes matrículados na UFG tem acesso ao aplicativo móvel, onde podem:
-	- [x] visualizar caronas oferecidas por outros estudantes por perto
 	- [x] solicitar caronas para um local desejado
 	- [x] oferecer caronas a outros estudantes, dado um local de saída e de chegada
 	- [x] definir um valor específico para sua carona, quando oferecerem
 
 ## 🎨 Layout
 
-O layout da aplicação está disponível no Figma [clicando aqui](https://www.figma.com/file/oYfElPcwqV7qjW5P2ysDxw/UniCaronas?node-id=0%3A1).
+Realizamos a contrução de wireframes para o projeto, que pode ser encontrado neste repositório, na pasta <strong>/wireframes</strong>.
 
 ## 🛠 Tecnologias
 
@@ -53,22 +56,18 @@ Será utilizada uma REST - API para a comunicação com o server side.
 
 
 ### Backend
-- Python 3.6 ou superior
-- Django 3.1.2 ou superior
+- Node JS
 - MondoDB Atlas
 - Heroku
 
-Para o back-end da aplicação será utilizado Python 3.6 juntamente com a coleção de bibliotecas Django 3.1.2, que são bastante úteis na construção de um server para a aplicação.
+Para o back-end da aplicação será utilizado NodeJS, que contempla ambiente de execução Javascript server-side construído no motor V8 do Chrome.
 
 Também será  utilizado MongoDB Atlas para a base de dados juntamente com Heroku, que é uma plataforma em nuvem (PaaS - Platform as a service) que suporta várias tecnologias para a hospedagem de aplicações.
 
-- [ ] React Native versão xx
-- [ ] Python versão 3.6
-- [ ] Django versão 3.1.2
-- [ ] MongoDB versão xx
-- [ ] Heroku versão xx
-- [ ] Digital Ocean versão xx
-- [ ] Docker versão xx
+- [ ] React Native 
+- [ ] Node.js versão 14.15.4 LTS
+- [ ] MongoDB 
+- [ ] Heroku 
 
 ## 🚀 Desenvolvimento
 
@@ -84,9 +83,10 @@ Também será  utilizado MongoDB Atlas para a base de dados juntamente com Herok
 ### Pré-requisitos
 
 Antes de dar início, certifique-se que tenha em sua máquina:
+- [ ] A parte FrontEnd do Projeto, disponível em: https://github.com/CS2020-1-CavaloTroia/UniCaronasMobile
+- [ ] A parte Backend do projeto, disponível em: https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
 - [ ] Banco de dados MongoBD
-- [ ] Python versão 3.6 ou superior
-- [ ] Django 3.1.2 ou superior
+- [ ] Node.js versão 14.15.4 LTS ou superior
 - [ ] Node versão 10.16 ou superior
 - [ ] Yarn versão 1.22.4 ou superior
 
@@ -103,24 +103,16 @@ Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](ht
 Clone este repositório
 $ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronas
 
-Acesse a pasta do projeto no seu terminal/cmd
-$ cd server/UniCaronas
-
-Para o Linux, necessário instalar o pip
-$ apt install python3-pip
+Acesse a pasta do projeto backend no seu terminal/cmd
+$ cd UniCaronasBackend
 
 Instale as dependências
-$ pip install Django==3.1.2 djangorestframework pyyaml django-rest-swagger dnspython djongo
-
-Execute a criação do banco de dados
-$ python manage.py migrate
+$ npm install
 
 Execute a aplicação
-$ python manage.py runserver
+$ yarn start
 
-A aplicação será aberta na porta:8000 - acesse http://localhost:8000
-Caso queira especificar a porta utilize
-$ python manage.py runserver <port>
+A aplicação será aberta na porta:3333  - acesse http://localhost:3333
 ```
 
 ### Rodando o Frontend
