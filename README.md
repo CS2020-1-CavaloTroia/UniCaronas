@@ -101,10 +101,13 @@ Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](ht
 
 ```bash
 Clone este repositório
-$ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronas
+$ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
 
 Acesse a pasta do projeto backend no seu terminal/cmd
 $ cd UniCaronasBackend
+
+Abra o VSCode
+$ code .
 
 Instale as dependências
 $ npm install
@@ -119,10 +122,10 @@ A aplicação será aberta na porta:3333  - acesse http://localhost:3333
 
 ```bash
 Clone este repositório
-$ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronas
+$ git clone https://github.com/CS2020-1-CavaloTroia/UniCaronasMobile
 
 Acesse a pasta do projeto no seu terminal/cmd
-$ cd app/UniCaronas
+$ cd UniCaronasMobile
 
 Instale as dependências
 $ yarn
