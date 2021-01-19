@@ -19,8 +19,8 @@
 ## 💻 Sobre o projeto
 
 O UniCaronas é um aplicativo mobile que nasceu da ideia de resolver uma necessidade
-comum no dia dia dos universitários: <strong>Encontrar caronas.</strong> O objetivo do app, portanto,
-é conectar motoristas e passageiros universitários, de forma que os estudantes psosam solicitar ou oferecer caronas.
+comum no dia a dia dos universitários: <strong>Encontrar caronas.</strong> O objetivo do app, portanto,
+é conectar motoristas e passageiros universitários, de forma que os estudantes possam solicitar ou oferecer caronas.
 
 <strong>A construção deste Projeto está dividida em dois repositórios:</strong> </br>
 * Mobile: https://github.com/CS2020-1-CavaloTroia/UniCaronasMobile</br>
