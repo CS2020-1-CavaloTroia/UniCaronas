@@ -12,7 +12,7 @@
  * [Sobre o projeto](#-sobre-o-projeto)
  * [Funcionalidades](#-funcionalidades)
  * [Layout](#-layout)
- * [Arquitetura](#-arquitetura)
+ * [Arquitetura](#arquitetura)
  * [Tecnologias](#-tecnologias)
  * [Autores](#-autores)
 
@@ -40,7 +40,7 @@ BACKEND: https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
 Realizamos a contrução de wireframes para o projeto, que pode ser encontrado neste repositório, na pasta <strong>/wireframes</strong>.
 
 
-### Arquitetura
+## Arquitetura
 
 - [ ] Diagrama Arquitetural
 <img src="https://github.com/CS2020-1-CavaloTroia/UniCaronas/blob/master/readme_images/arquitetura_UniCaronas.png" width="800">
