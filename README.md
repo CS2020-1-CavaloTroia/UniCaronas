@@ -76,7 +76,3 @@ Grupo Cavalo de Troia da turma de Construção de Software de 2020.1 da Universi
 * Fernando Severino Almeida
 * Gustavo Ribeiro de Oliveira
 * Michelly Silva Lima
-
-## Versões do README
-
-[Português 🇧🇷](./README.md) | [Inglês 🇺🇸](./README-en.md)
