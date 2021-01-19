@@ -23,8 +23,9 @@ comum no dia dia dos universitários: <strong>Encontrar caronas.</strong> O obje
 é conectar motoristas e passageiros universitários, de forma que os estudantes psosam solicitar ou oferecer caronas.
 
 <strong>A construção deste Projeto está dividida em dois repositórios:</strong> </br>
-MOBILE: https://github.com/CS2020-1-CavaloTroia/UniCaronasMobile</br>
-BACKEND: https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
+</br>
+Moblie: https://github.com/CS2020-1-CavaloTroia/UniCaronasMobile</br>
+Backend: https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
 
 >Projeto desenvolvido durante o curso de Construção de Software da Universidade Federal de Goiás.
 
